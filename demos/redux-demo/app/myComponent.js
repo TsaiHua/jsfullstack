@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 class MyComponent extends React.Component {
   render() {
@@ -8,8 +8,8 @@ class MyComponent extends React.Component {
         <p>{this.props.text}</p>
         <input defaultValue={this.props.name} onChange={this.props.onChange} />
       </div>
-    );
+    )
   }
 }
 
-export default MyComponent;
+export default MyComponent

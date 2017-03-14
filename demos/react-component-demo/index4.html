@@ -9,31 +9,34 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-  class MyTitle extends React.Component {
-    constructor(...args) {
-      super(...args);
-      this.state = {
-        text: 'World'
-      };
-    }
+      class MyTitle extends React.Component {
+        constructor(...args) {
+          super(...args)
+          this.state = {
+            text: 'World',
+            isClicked:false
+          }
+        }
 
-    handleClick() {
-      this.setState({
-        text: 'Clicked'
-      });
-    }
+        handleClick() {
+          let date = new Date()
+          let isClicked = !this.state.isClicked
+          this.setState({
+            text:`${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 tot:${isClicked?'clicked':'World'}`
+          })
+        }
 
-    render() {
-      return <h1 onClick={this.handleClick.bind(this)}>
-        {'Hello ' + this.state.text}
-      </h1>;
-    }
-  };
+        render() {
+          return <h1 onClick={this.handleClick.bind(this)}>
+            {'Hello ' + this.state.text}
+          </h1>
+        }
+      }
 
-  ReactDOM.render(
-    <MyTitle/>,
-    document.getElementById('example')
-  );
+      ReactDOM.render(
+        <MyTitle/>,
+        document.getElementById('example')
+      )
     </script>
   </body>
 </html>

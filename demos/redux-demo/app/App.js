@@ -1,12 +1,12 @@
-import { connect } from 'react-redux';
-import MyComponent from './myComponent';
+import { connect } from 'react-redux'
+import MyComponent from './myComponent'
 
 // Map Redux state to component props
 function mapStateToProps(state) {
   return {
     text: state.text,
     name: state.name
-  };
+  }
 }
 
 // Map Redux actions to component props
@@ -23,6 +23,6 @@ function mapDispatchToProps(dispatch) {
 const App = connect(
   mapStateToProps,
   mapDispatchToProps
-)(MyComponent);
+)(MyComponent)
 
-export default App;
+export default App

@@ -7,10 +7,10 @@ function reducer(state = {
       return {
         name: action.payload,
         text: '你好，' + action.payload
-      };
+      }
     default:
-      return state;
+      return state
   }
 }
 
-export default reducer;
+export default reducer

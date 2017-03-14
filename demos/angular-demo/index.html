@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
+<title>angular demo</title>
 <script src="angular.1.4.8.min.js"></script>
 <body>
-<div ng-app="">
+<!-- <div ng-app="">
   <p>姓名 : <input type="text" ng-model="name" placeholder="在这里输入您的大名"></p>
-  <h1>你好，{{name}}</h1>
+  <h1>hi，{{name}}</h1>
+</div> -->
+
+ <!-- 只能同时存在一个。 -->
+<div ng-app="">
+  <input type="text" ng-model="tot" placeholder="input">
+  <h4>hi,{{tot}}</h4>
 </div>
 </body>
 </html>
